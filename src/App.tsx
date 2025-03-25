@@ -3,7 +3,6 @@
 // // import Task6 from "./lessons/Lesson06/Lesson06";
 import Lesson06 from "./lessons/Lesson06/Lesson06";
 
-
 function App() {
 
   return (
