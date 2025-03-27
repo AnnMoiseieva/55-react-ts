@@ -1,4 +1,4 @@
 export interface ProductCardProps {
-  name: string;
-  price: number;
+  productName: string;
+  productPrice: number;
 }

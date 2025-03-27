@@ -1,11 +1,11 @@
 import { ProductCardProps } from "./types";
 import "./style.css";
 
-function ProductCard({ name, price }: ProductCardProps) {
+function ProductCard({ productName, productPrice }: ProductCardProps) {
   return (
     <div className="product-card-container">
-      <h2>{name}</h2>
-      <div>{price}</div>
+      <div>Product: {productName}</div>
+      <div>Price: {productPrice}</div>
     </div>
   );
 }

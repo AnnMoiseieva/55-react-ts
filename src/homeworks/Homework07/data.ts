@@ -1,4 +1,7 @@
-export const products = [
+import { Product } from "./types";
+
+
+export const products: Product[] = [
   {
     name: "Apple",
     price: 1.5,
@@ -11,4 +14,13 @@ export const products = [
     name: "Orange",
     price: 2.0,
   },
+  // {
+  //   name: "Grape",
+  //   price: 2.0,
+  //   count: 32,
+  // },
 ];
+
+products.push({name: "Grape",
+    price: 2.0,
+    count: 32,})

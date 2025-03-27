@@ -3,22 +3,26 @@ import { v4 } from "uuid";
 import ProductCard from "../../components/Product/Product";
 import { products } from "./data";
 import "./style.css";
+import { Product } from "./types";
+
 
 function Homework07() {
-  const productCards = products.map((product) => {
+  const productCards = products.map((product: Product) => {
     return (
       <ProductCard
         key={v4()}
-        name={product.name}
-        price={product.price}
+        productName={product.name}
+        productPrice={product.price}
       />
-    );
-  });
+    )
+  })
 
-  console.log(productCards);
-
-  return <div className="cards-wrapper">{productCards}</div>;
- 
+  return (
+    <div className="cards-wrapper">
+      <h1>Products</h1>
+      {productCards}
+    </div>
+  )
 }
-
+ 
 export default Homework07;
