@@ -19,7 +19,7 @@ function Homework08() {
       <h2>Change password</h2>
       <Input
         name="password"
-        //   label="Password:"
+        label="Password:"
         placeholder="Enter password..."
         type="password"
         onChange={onChangePassword}
