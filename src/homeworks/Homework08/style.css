@@ -1,0 +1,29 @@
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 30px;
+    background-image: linear-gradient(to right, rgb(4, 1, 19), rgb(132, 165, 231));
+}
+
+.password-container>h2 {
+    color: rgb(163, 8, 8);
+    font-size: 28px;
+}
+
+.password-container > Button {
+        font-weight: 600;
+        background-color: rgb(139, 122, 27);
+        border: 2px solid black;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 12px;
+
+}
+
+.password-container>Button:hover {
+    color: rgb(4, 4, 4);
+    background-color: transparent;
+}
