@@ -1,0 +1,10 @@
+.homework09-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 30px;
+    padding: 40px;
+    background-color: rgb(238, 238, 229);
+}

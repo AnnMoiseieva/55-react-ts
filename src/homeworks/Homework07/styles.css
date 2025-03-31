@@ -4,7 +4,7 @@
     align-items: center;
     flex: 1;
     gap: 30px;
-    background-image: linear-gradient(to right, rgb(4, 1, 19), rgb(132, 165, 231));
+    background-image: linear-gradient(to right, rgb(4, 1, 19), rgb(171, 194, 240));
     padding: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
 }
