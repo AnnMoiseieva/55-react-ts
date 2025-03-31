@@ -1,10 +1,10 @@
-import "./styles.css";
 
-import { DescriptionCard, TitleCard, UserCard } from "./styles";
+
+import { DescriptionCard, Homework09Container, TitleCard, UserCard } from "./styles";
 
 function Homework09() {
   return (
-    <div className="homework09-container">
+    <Homework09Container>
       <UserCard primary>
         <TitleCard>VIP User</TitleCard>
         <DescriptionCard>
@@ -18,7 +18,7 @@ function Homework09() {
           Standard access, basic features and first-come, first-served support.
         </DescriptionCard>
       </UserCard>
-    </div>
+    </Homework09Container>
   );
 }
 

@@ -1,8 +1,21 @@
 import styled from "@emotion/styled";
 
+
+
 interface UserCardStyledProps {
     primary?: boolean;
 }
+
+export const Homework09Container = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 30px;
+    padding: 40px;
+    background-color: rgb(238, 238, 229);
+`
 
 export const UserCard = styled.div<UserCardStyledProps>`
   display: flex;
