@@ -1,18 +1,23 @@
 import { ChangeEvent, useState } from "react";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
-import "./style.css";
+import "./styles.css";
 
 function Homework08() {
-  const [newPassword, setNewPassword] = useState<string>();
+  const [newPassword, setNewPassword] = useState<string>('');
   const [showNewPassword, setShowNewPassword] = useState<boolean>(false);
 
   const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
     setNewPassword(event.target.value);
   };
+
   const showNewPasswordHandler = () => {
-    setShowNewPassword(!showNewPassword);
+    setShowNewPassword(true);
   };
+
+  const hidePassword = () => {
+    setShowNewPassword(false)
+  }
 
   return (
     <div className="password-container">
@@ -20,6 +25,7 @@ function Homework08() {
       <Input
         name="password"
         label="Password:"
+        id="password-id"
         placeholder="Enter password..."
         type="password"
         onChange={onChangePassword}
@@ -27,7 +33,8 @@ function Homework08() {
       />
 
       <Button name="SHOW PASSWORD" onClick={showNewPasswordHandler} />
-      {showNewPassword && <div>{newPassword}</div>}
+      <Button name="HIDE PASSWORD" onClick={hidePassword} />
+      {showNewPassword && <div className="result-container">{newPassword}</div>}
     </div>
   );
 }

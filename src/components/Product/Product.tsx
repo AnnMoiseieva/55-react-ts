@@ -1,5 +1,5 @@
 import { ProductCardProps } from "./types";
-import "./style.css";
+import "./styles.css";
 
 function ProductCard({ productName, productPrice }: ProductCardProps) {
   return (

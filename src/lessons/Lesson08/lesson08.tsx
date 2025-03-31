@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 
 import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
-import "./style.css";
+import "./styles.css";
 // All pictures in the project are already exported by default.
 // To add an image to a component you need to import it by default and create an alias
 import AvatarImg from "../../assets/avatar.jpg";

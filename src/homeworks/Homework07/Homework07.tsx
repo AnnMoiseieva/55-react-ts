@@ -2,7 +2,7 @@ import { v4 } from "uuid";
 
 import ProductCard from "../../components/Product/Product";
 import { products } from "./data";
-import "./style.css";
+import "./styles.css";
 import { Product } from "./types";
 
 

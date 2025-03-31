@@ -2,7 +2,7 @@ import { v4 } from "uuid";
 
 import AnimalCard from "../../components/AnimalCard/AnimalCard";
 import { animalData } from "./data";
-import './style.css'
+import './styles.css'
 
 function Lesson07() {
   const animalCards = animalData.map((animal) => {

@@ -1,5 +1,5 @@
 import { EmployeeCardProps } from "./types"
-import "./Style.css"
+import "./styles.css"
 // children - additional props, a special prop that can be used to pass JSX elements to a component
 
 function EmployeeCard({name, position, department, image, children }: EmployeeCardProps) {

@@ -27,3 +27,9 @@
     color: rgb(4, 4, 4);
     background-color: transparent;
 }
+
+.result-container {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(46,46,75);
+}

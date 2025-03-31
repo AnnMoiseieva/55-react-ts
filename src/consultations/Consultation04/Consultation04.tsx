@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import Button from "../../components/Button/Button";
 import Input from "../../components/Input/Input";
-import "./style.css";
+import "./styles.css";
 
 function Consultation04() {
   // 1st step

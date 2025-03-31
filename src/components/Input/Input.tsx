@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styles.css";
 import { InputProps } from "./types";
 
 function Input({
