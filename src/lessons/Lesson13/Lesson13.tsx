@@ -9,6 +9,7 @@ import {
   Error,
   ImageContainer,
   ButtonInputContainer,
+  ImageElement,
 } from "./styles";
 import Spinner from "../../components/Spinner/Spinner";
 import Input from "../../components/Input/Input";
@@ -54,7 +55,7 @@ function Lesson13() {
 
   const imageElements = images.map((image) => (
     <ImageWrapper>
-      <img src={image} alt="Animal" key={v4()} />
+      <ImageElement src={image} alt="Animal" key={v4()} />
     </ImageWrapper>
   ));
 
