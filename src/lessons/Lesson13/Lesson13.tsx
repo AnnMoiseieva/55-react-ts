@@ -53,8 +53,8 @@ function Lesson13() {
   };
 
   const imageElements = images.map((image) => (
-    <ImageWrapper key={image}>
-      <img src={image} alt="Animal" />
+    <ImageWrapper>
+      <img src={image} alt="Animal" key={v4()} />
     </ImageWrapper>
   ));
 
@@ -82,7 +82,7 @@ function Lesson13() {
       <ImageContainer>
         {isLoading ? <Spinner /> : imageElements}
       </ImageContainer>
-      
+
     </Lesson13Container>
   );
 }
