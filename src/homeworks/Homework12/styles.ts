@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import backImage from '../../assets/background.jpg'
 
 export const Homework12Container = styled.div`
   display: flex;
@@ -8,11 +9,13 @@ export const Homework12Container = styled.div`
   gap: 40px;
   flex: 1;
   padding: 60px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(2, 44, 55),
-    rgb(173, 172, 159)
-  );
+    rgb(173, 172, 159); */
+  background-image: url(${backImage});
+  background-position: center;
+  background-size: cover;
 `;
 
 export const FactWrapper = styled.div`

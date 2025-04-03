@@ -17,8 +17,6 @@ function Homework12() {
       setIsLoading(true);
       const response = await axios.get(FACT_URL);
       const data = response.data;
-      console.log(data);
-
       setFact(data.fact);
     } catch (error: any) {
       setError(error.message);
