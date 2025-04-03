@@ -13,10 +13,8 @@ import {
 import Spinner from "../../components/Spinner/Spinner";
 import Input from "../../components/Input/Input";
 
-
 function Lesson13() {
-  // const [image, setImage] = useState<string | undefined>(undefined);
-  const [images, setImages] = useState<string[] | undefined[]>([]);
+  const [images, setImages] = useState<string[]>([]);
   const [error, setError] = useState<string | undefined>(undefined);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
@@ -50,10 +48,15 @@ function Lesson13() {
   };
 
   const deleteAllData = () => {
-      setImages([]);
-      setInputValue("");
-    };
-    
+    setImages([]);
+    setInputValue("");
+  };
+
+  const imageElements = images.map((image) => (
+    <ImageWrapper key={image}>
+      <img src={image} alt="Animal" />
+    </ImageWrapper>
+  ));
 
   return (
     <Lesson13Container>
@@ -77,16 +80,9 @@ function Lesson13() {
       <Error>{error}</Error>
 
       <ImageContainer>
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          images.map((image) => (
-            <ImageWrapper>
-                  <img src={image} alt="Animal" key={v4()} />
-            </ImageWrapper>
-          ))
-        )}
+        {isLoading ? <Spinner /> : imageElements}
       </ImageContainer>
+      
     </Lesson13Container>
   );
 }
