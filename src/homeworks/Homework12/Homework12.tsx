@@ -19,7 +19,7 @@ function Homework12() {
       const data = response.data;
       console.log(data);
 
-      setFact(`${data.fact}`);
+      setFact(data.fact);
     } catch (error: any) {
       setError(error.message);
     } finally {
