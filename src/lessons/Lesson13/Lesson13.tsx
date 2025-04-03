@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { v4 } from "uuid";
 
 import Button from "../../components/Button/Button";
 import {
@@ -11,6 +12,7 @@ import {
 } from "./styles";
 import Spinner from "../../components/Spinner/Spinner";
 import Input from "../../components/Input/Input";
+
 
 function Lesson13() {
   // const [image, setImage] = useState<string | undefined>(undefined);
@@ -48,8 +50,10 @@ function Lesson13() {
   };
 
   const deleteAllData = () => {
-    setImages([]);
-  };
+      setImages([]);
+      setInputValue("");
+    };
+    
 
   return (
     <Lesson13Container>
@@ -76,9 +80,9 @@ function Lesson13() {
         {isLoading ? (
           <Spinner />
         ) : (
-          images.map((image, index) => (
+          images.map((image) => (
             <ImageWrapper>
-              <img src={image} alt="Animal" />
+                  <img src={image} alt="Animal" key={v4()} />
             </ImageWrapper>
           ))
         )}

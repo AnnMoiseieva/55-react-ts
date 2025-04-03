@@ -11,8 +11,10 @@ export const Lesson13Container = styled.div`
   background-image: linear-gradient(
     to right,
     rgb(2, 44, 55),
-    rgb(173, 172, 159)
-  );
+    rgb(173, 172, 159));
+     background-position: center;
+     background-size: cover;
+
 `;
 
 export const ButtonInputContainer = styled.div`
