@@ -19,4 +19,9 @@ export const MainButton = styled.button<MainButtonStyledProps>`
   &:disabled {
     background-color: rgb(202, 200, 200);
   }
+
+  &:hover {
+    color: rgb(4, 4, 4);
+    background-color: rgb(50, 93, 203);
+  }
 `;
