@@ -11,16 +11,17 @@ export const Lesson13Container = styled.div`
   background-image: linear-gradient(
     to right,
     rgb(2, 44, 55),
-    rgb(173, 172, 159));
-     background-position: center;
-     background-size: cover;
-
+    rgb(173, 172, 159)
+  );
+  background-position: center;
+  background-size: cover;
 `;
 
 export const ButtonInputContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
+  width: 400px;
 `;
 
 export const ImageContainer = styled.div`
@@ -30,6 +31,8 @@ export const ImageContainer = styled.div`
   justify-content: center;
   min-width: 500px;
   min-height: 400px;
+  max-height: 700px;
+  overflow-y: auto;
   /* width: 100%; */
   /* background-color: white; */
   border-radius: 10px;
@@ -39,12 +42,9 @@ export const ImageContainer = styled.div`
 export const ImageWrapper = styled.div`
   margin: 16px;
   background-color: white;
-  max-height: 700px;
   padding: 30px;
-  overflow-y: auto;
   max-width: 100%;
-  overflow-x: auto;
-`;
+ `;
 
 export const Error = styled.div`
   font-size: 28px;
@@ -53,4 +53,5 @@ export const Error = styled.div`
 `;
 
 export const ImageElement = styled.img`
-`
+  width: 400px;
+`;

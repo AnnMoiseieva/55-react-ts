@@ -23,22 +23,23 @@ function Lesson13() {
   const IMAGE_URL: string = "https://dog.ceo/api/breeds/image/random";
   const getImage = async () => {
     setError(undefined);
+    setIsLoading(true);
     try {
       setIsLoading(true);
       const response = await axios.get(IMAGE_URL);
-      //   console.log(response.data);
-
       setImages((prevImages) => [...prevImages, response.data.message]);
-    } catch (error: any) {
-      setError(error.message);
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error)) {
+        setError(error.message);
+      } else {
+        setError("Unknown error");
+      }
     } finally {
       setIsLoading(false);
     }
   };
 
-  useEffect(() => {
-    getImage();
-  }, []);
+ 
 
   const handleInputChange = async (
     element: React.ChangeEvent<HTMLInputElement>
@@ -59,6 +60,12 @@ function Lesson13() {
     </ImageWrapper>
   ));
 
+  const isAnyImage: boolean = images.length > 0;
+
+   useEffect(() => {
+     getImage();
+   }, []);
+  
   return (
     <Lesson13Container>
       <ButtonInputContainer>
@@ -73,17 +80,18 @@ function Lesson13() {
           value={inputValue}
           onChange={handleInputChange}
         />
-        {images.length > 0 && (
+        {isAnyImage && 
           <Button name="DELETE ALL DATA" onClick={deleteAllData} />
-        )}
+        }
       </ButtonInputContainer>
 
       <Error>{error}</Error>
-
-      <ImageContainer>
-        {isLoading ? <Spinner /> : imageElements}
-      </ImageContainer>
-
+      {isAnyImage && 
+        <ImageContainer>
+          {imageElements}
+          {isLoading && <Spinner />}
+        </ImageContainer>
+      }
     </Lesson13Container>
   );
 }
