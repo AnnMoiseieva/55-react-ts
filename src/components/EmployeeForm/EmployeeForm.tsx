@@ -7,73 +7,14 @@ import { EmployeeFormComponent, Title } from "./styles";
 import { EmployeeFormValues } from "./types";
 
 function EmployeeForm() {
-  // Создание валидационной схемы
-  const schema = Yup.object().shape({
-    email: Yup.string()
-      .required("Field email is required")
-      .email("Field has type email (@ etc.)")
-      .max(25, "Max 25 symbols")
-      .min(15, "Min 15 symbols"),
-    password: Yup.number()
-      .typeError("Password must be a number")
-      .required("Field password is required")
-      .max(255, "Max 225")
-      .min(15, "Min 15"),
-  });
-
-  //Настройка формы. При вызове useFormik в него нужно передать аргумент
-  //аргумент - объект, с на данными (настройкой) определённой формы.
-  //При вызове useFormik, возвращается объект, в котором хранятся значения полей, ошибки
-  //различные методы для работы с формой
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      password: "",
-    } as EmployeeFormValues,
-    // validationSchema - свойство, в значение которого добавляют
-    // ранее созданную валидационную схему (через Yup)
-    validationSchema: schema,
-    validateOnChange: false,
-    // validateOnMount: true,
-    //onSubmit - функция, которая будет вызвана, когда произойдёт событие submit для формы
-    onSubmit: (values: EmployeeFormValues) => {
-      console.table(values);
-    },
-  });
-
-  console.log(formik);
+  
 
   return (
-    //Для выполнения функции, которая прописана в свойстве onSubmit (в настройке useFormik)
-    //в элемент формы (LoginFormComponent) необходимо передать formik.handleSubmit
-    <EmployeeFormComponent onSubmit={formik.handleSubmit}>
+   
+    <EmployeeFormComponent> 
       <Title>Login form</Title>
-      {/* Для контроля элементов формы необходимо передать значения в
-      prop value и onChange 
-      для value - {formik.values.name} (name - точное название элемента)
-      для onChange - одинаковый для всех элементов {formik.handleChange}
-      */}
-      <Input
-        name="email"
-        label="Email *"
-        id="email_id"
-        placeholder="Enter your email"
-        value={formik.values.email}
-        onChange={formik.handleChange}
-        error={formik.errors.email}
-      />
-
-      <Input
-        name="password"
-        label="Password *"
-        id="password_id"
-        placeholder="Enter your password"
-        value={formik.values.password}
-        onChange={formik.handleChange}
-        error={formik.errors.password}
-      />
-
-      <Button name="LOGIN" />
+     
+          
     </EmployeeFormComponent>
   );
 }
