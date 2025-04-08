@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import Course from "./pages/Course/Course";
 
 // Lessons imports:
 // default import of component Lesson06
@@ -75,8 +76,9 @@ function App() {
         <GlobalStyles />
         <Layout>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/course" element={<Course/>} />
           </Routes>
         </Layout>
       </BrowserRouter>
