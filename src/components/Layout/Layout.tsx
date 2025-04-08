@@ -19,6 +19,7 @@ function Layout({ children }: LayoutProps) {
         <Navigation>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
+          <NavLink to="/course">Course</NavLink>
         </Navigation>
       </Header>
       <Main>{children}</Main>
