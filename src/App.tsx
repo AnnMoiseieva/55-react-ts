@@ -1,5 +1,9 @@
-
 import GlobalStyles from "./styles/GlobalStyles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout/Layout";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 
 // Lessons imports:
 // default import of component Lesson06
@@ -24,41 +28,58 @@ import GlobalStyles from "./styles/GlobalStyles";
 // import Homework11 from "./homeworks/Homework11/Homework11";
 // import Homework12 from "./homeworks/Homework12/Homework12";
 // import Homework14 from "./homeworks/Homework14/Homework14";
-import Homework15 from "./homeworks/Homework15/Homework15";
+// import Homework15 from "./homeworks/Homework15/Homework15";
 
 // Consultations imports:
 // import Consultation04 from "./consultations/Consultation04/Consultation04";
 // import Consultation05 from "./consultations/Consultation05/Consultation05";
 // import Consultation06 from "./consultations/Consultation06/Consultation06";
 
+// function App() {
+//   return (
+//     <>
+//       <GlobalStyles />
+//       {/*<Task6 />*/}
+//       {/* <Lesson06 /> */}
+//       {/* <Lesson07 /> */}
+//       {/* <Lesson08 /> */}
+//       {/* <Lesson09 /> */}
+//       {/* <Lesson10 /> */}
+//       {/* <Lesson11 /> */}
+//       {/* <Lesson12 /> */}
+//       {/* <Lesson13 /> */}
+//       {/* <Lesson14 /> */}
+
+//       {/* <Homework06 /> */}
+//       {/* <Homework07 /> */}
+//       {/* <Homework08 /> */}
+//       {/* <Homework09 /> */}
+//       {/* <Homework10/> */}
+//       {/* <Homework11/> */}
+//       {/* <Homework12/> */}
+//       {/* <Homework14/> */}
+//       {/* <Homework15/> */}
+
+//       {/* <Consultation04 /> */}
+//       {/* <Consultation05 /> */}
+//       {/* <Consultation06 /> */}
+//     </>
+//   );
+// }
+// export default App;
+
 function App() {
   return (
     <>
-      <GlobalStyles />
-      {/*<Task6 />*/}
-      {/* <Lesson06 /> */}
-      {/* <Lesson07 /> */}
-      {/* <Lesson08 /> */}
-      {/* <Lesson09 /> */}
-      {/* <Lesson10 /> */}
-      {/* <Lesson11 /> */}
-      {/* <Lesson12 /> */}
-      {/* <Lesson13 /> */}
-      {/* <Lesson14 /> */}
-                 
-      {/* <Homework06 /> */}
-      {/* <Homework07 /> */}
-      {/* <Homework08 /> */}
-      {/* <Homework09 /> */}
-      {/* <Homework10/> */}
-      {/* <Homework11/> */}
-      {/* <Homework12/> */}
-      {/* <Homework14/> */}
-      <Homework15/>
-
-      {/* <Consultation04 /> */}
-      {/* <Consultation05 /> */}
-      {/* <Consultation06 /> */}
+      <BrowserRouter>
+        <GlobalStyles />
+        <Layout>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
     </>
   );
 }
