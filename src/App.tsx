@@ -6,9 +6,11 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Course from "./pages/Course/Course";
 import Users from "./pages/Users/Users";
-import Designer from "./pages/Users/Components/Designer/Designer";
-import Manager from "./pages/Users/Components/Manager/Manager";
+import Designer from "./pages/Users/components/Designer/Designer";
+import Manager from "./pages/Users/components/Manager/Manager";
 import PageNotFound from "./pages/Users/PageNotFound/PageNotFound";
+import Clients from "./pages/Clients/Clients";
+import Codewave from "./pages/Clients/componenets/Codewave/Codewave";
 
 // Lessons imports:
 // default import of component Lesson06
@@ -87,6 +89,9 @@ function App() {
             <Route path="/users/designer" element={<Designer />} />
             <Route path="/users/manager" element={<Manager />} />
             <Route path="*" element={<PageNotFound />} />
+
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/clients/codewave" element={<Codewave />} />
           </Routes>
         </Layout>
       </BrowserRouter>
