@@ -8,11 +8,15 @@ export const HomeWrapper = styled.div`
   justify-content: center;
   flex: 1;
   padding: 60px;
-  background-color: rgb(232, 238, 197);
-`;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 1, 19),
+    rgb(132, 165, 231)
+  );
+ `;
 
 export const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
-  color: #f54c51;
+  color: #940c11;
 `;

@@ -5,6 +5,10 @@ import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Course from "./pages/Course/Course";
+import Users from "./pages/Users/Users";
+import Designer from "./pages/Users/Components/Designer/Designer";
+import Manager from "./pages/Users/Components/Manager/Manager";
+import PageNotFound from "./pages/Users/PageNotFound/PageNotFound";
 
 // Lessons imports:
 // default import of component Lesson06
@@ -78,7 +82,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/course" element={<Course/>} />
+            <Route path="/course" element={<Course />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/users/designer" element={<Designer />} />
+            <Route path="/users/manager" element={<Manager />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Layout>
       </BrowserRouter>
