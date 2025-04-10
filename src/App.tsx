@@ -1,14 +1,15 @@
-import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import GlobalStyles from "./styles/GlobalStyles";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Course from "./pages/Course/Course";
 import Users from "./pages/Users/Users";
-import Designer from "./pages/Users/Components/Designer/Designer";
-import Manager from "./pages/Users/Components/Manager/Manager";
+import Designer from "./pages/Users/components/Designer/Designer";
+import Manager from "./pages/Users/components/Manager/Manager";
 import PageNotFound from "./pages/Users/PageNotFound/PageNotFound";
+import Lesson18 from "./lessons/Lesson18/Lesson18";
 
 // Lessons imports:
 // default import of component Lesson06
@@ -75,22 +76,28 @@ import PageNotFound from "./pages/Users/PageNotFound/PageNotFound";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <GlobalStyles />
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/course" element={<Course />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/users/designer" element={<Designer />} />
-            <Route path="/users/manager" element={<Manager />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
-    </>
+    //BrowserRouter is a global wrapper for the entire application,
+    // which allows you to use routing
+    <BrowserRouter>
+      <GlobalStyles />
+      <Layout>
+        {/* Routes - a wrapper that collects all the application routes */}
+        <Routes>
+          {/* Route - a library component to which the route is passed and the component (page) 
+          that should be called if the transition is made along this route */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/course" element={<Course />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users/designer" element={<Designer />} />
+          <Route path="/users/manager" element={<Manager />} />
+          <Route path="/Lesson18" element={<Lesson18 />} />
+          {/* path='*' - a special route that will call the passed component in the case 
+          that the route that the user is accessing is not found in the routes above */}
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
