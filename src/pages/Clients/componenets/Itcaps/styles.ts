@@ -18,5 +18,6 @@ export const CompanyName = styled.div`
 
 export const Image = styled.img`
   width: 400px;
+  border-radius: 20%;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 `;
